@@ -1,0 +1,7 @@
+{
+  "name": "animechain-frontend",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}

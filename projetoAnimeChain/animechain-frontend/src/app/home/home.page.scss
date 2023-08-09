@@ -1,0 +1,22 @@
+div.main-text {
+  width: 50%;
+  margin: 10%;
+
+  h1 {
+    font-size: 20px;
+  }
+
+  p.brand-name {
+    font-size: 68px;
+    font-weight: 900;
+    background: linear-gradient(90deg, #12C2E9 0%, #c471ed 50%, #f64f59 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+
+  p {
+    font-size: 14px;
+    margin: 0px;
+    margin-bottom: 20px;
+  }
+}
