@@ -1,0 +1,330 @@
+  <ion-toolbar>
+    <ion-title>AnimeChain</ion-title>
+    <ion-buttons slot="end">
+      <ion-button fill="clear" color="primary" routerLink="/home">Home</ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+
+<ion-content>
+  <ion-card class="ion-text-center" *ngIf="registrationStep === 'initialForm'" [@cardSwap]>
+    <ion-card-header>
+      <ion-card-title>Register to AnimeChain</ion-card-title>
+      <ion-card-subtitle>Basic Account information</ion-card-subtitle>
+    </ion-card-header>
+    <ion-card-content>
+      <form class="register-form" [formGroup]="registerForm" (ngSubmit)="onSubmit()">
+
+        <ion-item mode="md" fill="outline" lines="none">
+          <ion-input type="text" formControlName="username" label="Username" (ionFocus)="showUsernameRules = true"
+            (ionBlur)="showUsernameRules = false"></ion-input>
+          <ion-icon name="checkmark" color="success" slot="end"
+            *ngIf="(registerForm.get('username')?.value || '').length >= 4 && (registerForm.get('username')?.value || '').length <= 20 && !registerForm.get('username')?.errors?.['usernameTaken']">
+          </ion-icon>
+        </ion-item>
+        <div class="username-rules rules" *ngIf="showUsernameRules" [@fadeInOut]>
+          <ion-list mode="ios" inset="true">
+            <ion-grid><ion-row>
+                <ion-col size="6">
+                  <ion-item lines="none">
+                    <ion-icon name="checkmark" color="success"
+                      *ngIf="(registerForm.get('username')?.value || '').length >= 4 && (registerForm.get('username')?.value || '').length <= 20"></ion-icon>
+                    <ion-icon name="close" color="danger"
+                      *ngIf="(registerForm.get('username')?.value || '').length < 4 || (registerForm.get('username')?.value || '').length > 20"></ion-icon>
+                    <ion-label>4 to 20 Characters</ion-label>
+                  </ion-item>
+                </ion-col>
+                <ion-col size="6">
+                  <ion-item lines="none">
+                    <ion-icon name="checkmark" color="success"
+                      *ngIf="(registerForm.get('username')?.value || '').length >= 4 && !registerForm.get('username')?.errors?.['usernameTaken']"></ion-icon>
+                    <ion-icon name="close" color="danger"
+                      *ngIf="registerForm.get('username')?.errors?.['usernameTaken']"></ion-icon>
+                    <ion-label *ngIf="(registerForm.get('username')?.value || '').length >= 4">Username
+                      Available</ion-label>
+                  </ion-item>
+                </ion-col>
+              </ion-row></ion-grid>
+          </ion-list>
+        </div>
+
+        <ion-item mode="md" fill="outline" lines="none">
+          <ion-input type="email" formControlName="email" label="Email" (ionFocus)="showEmailRules = true"
+            (ionBlur)="showEmailRules = false"></ion-input>
+          <ion-icon name="checkmark" color="success" slot="end"
+            *ngIf="registerForm.get('email')?.valid && !registerForm.get('email')?.errors?.['emailTaken']">
+          </ion-icon>
+        </ion-item>
+        <div class="email-rules rules" *ngIf="showEmailRules" [@fadeInOut]>
+          <ion-list mode="ios" inset="true">
+            <ion-grid><ion-row>
+                <ion-col size="6">
+                  <ion-item lines="none">
+                    <ion-icon name="checkmark" color="success" *ngIf="registerForm.get('email')?.valid"></ion-icon>
+                    <ion-icon name="close" color="danger" *ngIf="registerForm.get('email')?.invalid"></ion-icon>
+                    <ion-label>Valid Email</ion-label>
+                  </ion-item>
+                </ion-col>
+                <ion-col size="6">
+                  <ion-item lines="none">
+                    <ion-icon name="checkmark" color="success"
+                      *ngIf="registerForm.get('email')?.valid && !registerForm.get('email')?.errors?.['emailTaken']"></ion-icon>
+                    <ion-icon name="close" color="danger"
+                      *ngIf="registerForm.get('email')?.errors?.['emailTaken']"></ion-icon>
+                    <ion-label
+                      *ngIf="registerForm.get('email')?.valid || registerForm.get('email')?.errors?.['emailTaken']">Email
+                      Available</ion-label>
+                  </ion-item>
+                </ion-col>
+              </ion-row></ion-grid>
+          </ion-list>
+        </div>
+
+        <ion-item mode="md" fill="outline" lines="none">
+          <ion-input [type]="showPassword ? 'text' : 'password'" formControlName="password" label="Password"
+            (ionFocus)="showPasswordRules = true" (ionBlur)="showPasswordRules = false"></ion-input>
+          <ion-icon name="checkmark" color="success" slot="end" *ngIf="(registerForm.get('password')?.value || '').length >= 8 &&
+          registerForm.get('password')?.value?.match('^(?=.*[A-Z])') &&registerForm.get('password')?.value?.match('^(?=.*[0-9])') &&
+          registerForm.get('password')?.value?.match('^(?=.*[!@#$%^&*])')">
+          </ion-icon>
+          <ion-icon name="eye-outline" slot="end" (click)="toggleShowPassword()" *ngIf="!showPassword"></ion-icon>
+
+          <ion-icon name="eye-off-outline" slot="end" (click)="toggleShowPassword()" *ngIf="showPassword"></ion-icon>
+        </ion-item>
+        <div class="password-rules rules" *ngIf="showPasswordRules" [@fadeInOut]>
+          <ion-list mode="ios" inset="true">
+            <ion-grid><ion-row>
+                <ion-col size="6">
+                  <ion-item lines="none">
+                    <ion-icon name="checkmark" color="success"
+                      *ngIf="(registerForm.get('password')?.value || '').length >= 8"></ion-icon>
+                    <ion-icon name="close" color="danger"
+                      *ngIf="(registerForm.get('password')?.value || '').length < 8"></ion-icon>
+                    <ion-label>8 Characters</ion-label>
+                  </ion-item>
+                  <ion-item lines="none">
+                    <ion-icon name="checkmark" color="success"
+                      *ngIf="registerForm.get('password')?.value?.match('^(?=.*[A-Z])')"></ion-icon>
+                    <ion-icon name="close" color="danger"
+                      *ngIf="!registerForm.get('password')?.value?.match('^(?=.*[A-Z])')"></ion-icon>
+                    <ion-label>1 Uppercase Letter</ion-label>
+                  </ion-item>
+                </ion-col>
+                <ion-col size="6">
+                  <ion-item lines="none">
+                    <ion-icon name="checkmark" color="success"
+                      *ngIf="registerForm.get('password')?.value?.match('^(?=.*[0-9])')"></ion-icon>
+                    <ion-icon name="close" color="danger"
+                      *ngIf="!registerForm.get('password')?.value?.match('^(?=.*[0-9])')"></ion-icon>
+                    <ion-label>1 Number</ion-label>
+                  </ion-item>
+                  <ion-item lines="none">
+                    <ion-icon name="checkmark" color="success"
+                      *ngIf="registerForm.get('password')?.value?.match('^(?=.*[!@#$%^&*])')"></ion-icon>
+                    <ion-icon name="close" color="danger"
+                      *ngIf="!registerForm.get('password')?.value?.match('^(?=.*[!@#$%^&*])')"></ion-icon>
+                    <ion-label>1 Special Character</ion-label>
+                  </ion-item>
+                </ion-col>
+              </ion-row></ion-grid>
+
+          </ion-list>
+        </div>
+
+        <ion-item mode="md" fill="outline" lines="none">
+          <ion-input [type]="showConfirmPassword ? 'text' : 'password'" formControlName="passwordConfirm"
+            label="Confirm Password" (ionFocus)="showConfirmPasswordRules = true"
+            (ionBlur)="showConfirmPasswordRules = false"></ion-input>
+          <ion-icon name="checkmark" color="success" slot="end"
+            *ngIf="registerForm.get('passwordConfirm')?.value === registerForm.get('password')?.value && registerForm.get('passwordConfirm')?.value != ''">
+          </ion-icon>
+          <ion-icon name="eye-outline" slot="end" (click)="toggleShowConfirmPassword()"
+            *ngIf="!showConfirmPassword"></ion-icon>
+
+          <ion-icon name="eye-off-outline" slot="end" (click)="toggleShowConfirmPassword()"
+            *ngIf="showConfirmPassword"></ion-icon>
+        </ion-item>
+        <div class="confirmPassword-rules rules" *ngIf="showConfirmPasswordRules" [@fadeInOut]>
+          <ion-list mode="ios" inset="true">
+            <ion-grid><ion-row>
+                <ion-col size="6">
+                  <ion-item lines="none">
+                    <ion-icon name="checkmark" color="success"
+                      *ngIf="registerForm.get('passwordConfirm')?.value === registerForm.get('password')?.value && registerForm.get('passwordConfirm')?.value != ''"></ion-icon>
+                    <ion-icon name="close" color="danger"
+                      *ngIf="registerForm.get('passwordConfirm')?.value !== registerForm.get('password')?.value && registerForm.get('passwordConfirm')?.value != ''"></ion-icon>
+                    <ion-label *ngIf="registerForm.get('passwordConfirm')?.value != ''">Passwords Match</ion-label>
+                  </ion-item>
+                </ion-col>
+              </ion-row></ion-grid>
+          </ion-list>
+        </div>
+
+
+        <ion-button expand="solid" shape="round" type="submit" [disabled]="!registerForm.valid">
+          Next <ion-icon name="arrow-forward"></ion-icon>
+        </ion-button>
+      </form>
+      <a [routerLink]="['/login']">Already have an account? Login</a>
+    </ion-card-content>
+  </ion-card>
+
+  <ion-card class="ion-text-center web3-info" *ngIf="registrationStep === 'web3WalletCreation'" [@cardSwap]>
+    <ion-card-header>
+      <ion-card-title>AnimeChain: Embrace Web3</ion-card-title>
+      <ion-card-subtitle>Your Gateway to a Decentralized Anime Experience</ion-card-subtitle>
+    </ion-card-header>
+    <ion-card-content>
+
+      <p>Our platform is <b>blockchain-connected</b> and uses it to store</p>
+      <ion-list>
+        <ion-row class="items-row">
+          <ion-col size="3" *ngFor="let item of items; let i = index;">
+            <div><ion-icon [name]="item.icon"></ion-icon>
+              <p>{{ item.label }}</p>
+            </div>
+          </ion-col>
+        </ion-row>
+      </ion-list>
+
+      <div style="display:flex;justify-content: center;">
+        <ion-icon name="lock-closed"></ion-icon>
+        <p> &nbsp; Providing complete control and security over your account!</p>
+      </div>
+
+      <ion-chip button color="primary" (click)="changeRegisterStep('importWallet')">Import Existing Hedera Wallet<ion-icon
+          name="wallet"></ion-icon></ion-chip>
+      <ion-chip button color="primary" (click)="createHederaWallet()">Create Wallet Now! <ion-icon
+          name="arrow-forward"></ion-icon></ion-chip>
+
+    </ion-card-content>
+  </ion-card>
+
+  <ion-card class="ion-text-center" *ngIf="registrationStep === 'importWallet'" [@cardSwap]>
+    <ion-card-header>
+      <ion-card-title>Import Existing Hedera Wallet</ion-card-title>
+      <ion-card-subtitle>Enter your <b>Wallet ID</b> and fill the <b>24 word mnemonic phrase</b> or provide the <b>wallet Private Key</b></ion-card-subtitle>
+    </ion-card-header>
+    <ion-card-content>
+      <form [formGroup]="importWalletForm" (ngSubmit)="importHederaWallet()">
+        <ion-item mode="md" lines="none" fill="outline">
+          <ion-input formControlName="walletId"  label="Wallet ID"></ion-input>
+        </ion-item>
+
+        <div style="margin:20px 0px;">
+          <p>Choose the method you want to use to import your wallet</p>
+          <ion-chip button color="primary" [outline]="importMethod === 'privateKey'" (click)="changeMethod('mnemonic')">Mnemonic Phrase<ion-icon name="apps-outline"></ion-icon></ion-chip>
+          <ion-chip button color="primary" [outline]="importMethod === 'mnemonic'" (click)="changeMethod('privateKey')">Private Key <ion-icon name="key"></ion-icon></ion-chip>
+        </div>
+
+        <ion-grid class="emptyMnemonic" *ngIf="importMethod === 'mnemonic'"><ion-row>
+          <ion-col size="6" size-xs="4" *ngFor="let word of emptyMnemonic; let index = index; trackBy: trackByFn">
+            <ion-item class="mnemonic">
+              <ion-chip color="primary">{{ index + 1 }}</ion-chip>
+              <ion-input type="text" (ionInput)="addToMnemonic($event, index)"></ion-input>
+            </ion-item>
+          </ion-col>
+        </ion-row></ion-grid>
+
+        <ion-item mode="md" lines="none" fill="outline" *ngIf="importMethod === 'privateKey'" style="margin-bottom: 25px;">
+          <ion-input formControlName="privateKey" label="Private Key"></ion-input>
+        </ion-item>
+
+        <div style="display:flex;">
+          <ion-button expand="solid" shape="round" fill="outline" (click)="changeRegisterStep('web3WalletCreation')">
+          <ion-icon name="arrow-back"></ion-icon> Back
+          </ion-button>
+          <ion-button expand="solid" shape="round" type="submit" style="width: 100%;" [disabled]="!importWalletForm.valid">
+            Import <ion-icon name="arrow-forward"></ion-icon>
+          </ion-button>
+        </div>
+      </form>
+
+    </ion-card-content>
+  </ion-card>
+
+  <ion-card *ngIf="registrationStep === 'mnemonic'" class="ion-text-center" [@cardSwap]>
+    <ion-card-header>
+      <ion-card-title>Save your Mnemonic Phrase</ion-card-title>
+      <ion-card-subtitle>A Mnemonic Phrase allows you to recover your account. <b>Write down the 24-Word Phrase below.
+          Keep it in a safe place.</b> We'll ask you to verify it on the next page</ion-card-subtitle>
+    </ion-card-header>
+    <ion-card-content>
+      <ion-grid><ion-row>
+          <ion-col size="6" size-xs="4" style="padding:0px" *ngFor="let word of mnemonic; let index = index">
+            <ion-item lines="none" class="mnemonic">
+              <ion-chip color="primary" outline="true">{{ index + 1 }}</ion-chip>
+              <ion-input type="text" value="{{ word }}" readonly></ion-input>
+            </ion-item>
+          </ion-col>
+        </ion-row></ion-grid>
+      <ion-button (click)="copyMnemonic()" fill="clear" shape="round" style="font-size: 12px;">
+        <ion-icon name="copy"></ion-icon> Copy Phrase To Clipboard
+        </ion-button>
+      <ion-button (click)="changeRegisterStep('mnemonicVerification')" expand="block" fill="solid" shape="round">
+        Next <ion-icon name="arrow-forward"></ion-icon>
+      </ion-button>
+
+    </ion-card-content>
+  </ion-card>
+
+  <ion-card *ngIf="registrationStep === 'mnemonicVerification'" class="ion-text-center" [@cardSwap]>
+    <ion-card-header>
+      <ion-card-title>Verify Mnemonic Phrase</ion-card-title>
+      <ion-card-subtitle>Please fill in the missing words. <b>You can't recover your account if you lose your 24-Word
+          Phrase. As long as you keep this phrase safe</b>, your wallet will be secure.
+      </ion-card-subtitle>
+    </ion-card-header>
+    <ion-card-content>
+      <ion-grid><ion-row>
+          <ion-col size="6" size-xs="4" style="padding:0px" *ngFor="let word of verifyMnemonic; let index = index">
+
+            <ion-item lines="none" class="mnemonic" *ngIf="shouldDisable(index)">
+              <ion-chip color="primary" outline="true">{{ index + 1 }}</ion-chip>
+              <ion-input type="text" [value]="word" readonly></ion-input>
+            </ion-item>
+
+            <ion-item class="mnemonic" *ngIf="!shouldDisable(index)">
+              <ion-chip color="primary">{{ index + 1 }}</ion-chip>
+              <ion-input type="text" (ionInput)="checkMnemonicWord($event, index)"></ion-input>
+            </ion-item>
+
+          </ion-col>
+        </ion-row></ion-grid>
+
+        <div style="display:flex;margin-top:20px">
+          <ion-button (click)="changeRegisterStep('mnemonic')" fill="outline" shape="round">
+            <ion-icon name="arrow-back"></ion-icon> Back
+          </ion-button>
+          <ion-button (click)="verifyMnemonicPhrase()" expand="block" shape="round" style="width:100%">
+            <ion-icon name="checkmark"></ion-icon> Verify
+          </ion-button>
+        </div>
+
+    </ion-card-content>
+  </ion-card>
+
+  <ion-card *ngIf="registrationStep === 'welcome'" class="ion-text-center" [@cardSwap]>
+    <ion-card-header>
+      <ion-card-title>Welcome to Hedera Wallet</ion-card-title>
+      <ion-card-subtitle>Let's review your account</ion-card-subtitle>
+    </ion-card-header>
+    <ion-card-content>
+      <ion-item lines="none">
+        <ion-icon name="person" slot="start"></ion-icon>
+        <ion-label>
+          <h2>{{ userRegisterData.username }}</h2>
+          <p>{{ userRegisterData.email }}</p>
+        </ion-label>
+        <ion-chip color="primary" outline="true">
+          Wallet ID: {{ userRegisterData.walletId }}
+        </ion-chip>
+      </ion-item>
+
+      <ion-button expand="block" shape="round" style="width:100%" [routerLink]="['/home']">
+      Access AnimeChain <ion-icon name="arrow-forward"></ion-icon>
+      </ion-button>
+
+    </ion-card-content>
+  </ion-card>
+
+</ion-content>
