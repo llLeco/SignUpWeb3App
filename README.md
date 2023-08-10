@@ -44,9 +44,9 @@ Este projeto oferece uma solução de Cadastro e Login de Usuário integrada com
 4. Navegue para o diretório frontend: `cd SignUpApp-Frontend/`
 5. Instale as dependências: `npm install` ou `yarn install`.
 6. Crie um arquivo chamado .env dentro da raiz do projeto backend com estas informações:
-  HEDERA_PRIVATE='SuaChavePrivadaHedera'
-  HEDERA_ACCOUNT='SuaContaHedera' (0.0.xxxxxxxx)
-  MONGODB_URI='URLDoBancoDeDadosMongoDB' (mongodb+srv://username:xxxxxxxxxxxx@clusterx.xxxxxx.mongodb.net/)
+ - HEDERA_PRIVATE='SuaChavePrivadaHedera'
+ - HEDERA_ACCOUNT='SuaContaHedera' (0.0.xxxxxxxx)
+ - MONGODB_URI='URLDoBancoDeDadosMongoDB' (mongodb+srv://username:xxxxxxxxxxxx@clusterx.xxxxxx.mongodb.net/)
 
 ## Como Usar
 
