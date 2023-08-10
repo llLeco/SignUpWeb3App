@@ -1,14 +1,7 @@
 # Sistema de Cadastro e Login de Usuário com Integração Blockchain
 
-[![Build Status](https://img.shields.io/github/workflow/status/llLeco/SignUpWeb3App/Build%20and%20Test)](https://github.com/llLeco/SignUpWeb3App/actions)
-[![Coverage](https://img.shields.io/codecov/c/github/llLeco/SignUpWeb3App)](https://codecov.io/gh/llLeco/SignUpWeb3App)
-[![Version](https://img.shields.io/github/v/release/llLeco/SignUpWeb3App)](https://github.com/llLeco/SignUpWeb3App/releases)
-[![License](https://img.shields.io/github/license/llLeco/SignUpWeb3App)](https://github.com/llLeco/SignUpWeb3App/blob/main/LICENSE)
-[![Platform](https://img.shields.io/badge/platform-web%20%7C%20android%20%7C%20ios-lightgrey)](https://github.com/llLeco/SignUpWeb3App)
-[![Downloads](https://img.shields.io/github/downloads/llLeco/SignUpWeb3App/total)](https://github.com/llLeco/SignUpWeb3App/releases)
+![GitHub top language](https://img.shields.io/github/languages/top/llLeco/SignUpWeb3App)
 [![Last Update](https://img.shields.io/github/last-commit/llLeco/SignUpWeb3App)](https://github.com/llLeco/SignUpWeb3App/commits/main)
-[![Open Issues](https://img.shields.io/github/issues/llLeco/SignUpWeb3App)](https://github.com/llLeco/SignUpWeb3App/issues)
-[![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg)](https://github.com/llLeco/SignUpWeb3App/pulls)
 
 [![GitHub](https://img.shields.io/github/followers/llLeco?label=Follow&style=social)](https://github.com/llLeco)
 [![Twitter Follow](https://img.shields.io/twitter/follow/YourTwitterHandle?style=social)](https://twitter.com/Leco712)
