@@ -10,22 +10,24 @@ Uma solução que permite o cadastro e login de usuários com a capacidade de cr
 - [Pré-requisitos](#pré-requisitos)
 - [Instalação](#instalação)
 - [Como Usar](#como-usar)
-- [Contato](#contato)
 
 ## Descrição
 
 Este projeto oferece uma solução de Cadastro e Login de Usuário integrada com a blockchain Hedera. Ele permite aos usuários criar carteiras Hedera ou importar carteiras existentes durante o processo de cadastro. A integração com a Hedera fornece a segurança e a descentralização necessárias para aplicativos Web3. O projeto foi desenvolvido com as tecnologias Angular, Ionic e NestJs para garantir uma experiência de usuário rica e eficiente.
 
+![showcase](https://github.com/llLeco/SignUpWeb3App/assets/80337869/42861341-a9ff-43d8-955a-b2fa6ceaa332)
+
 ## Funcionalidades
 
-- Cadastro de usuário com criação de carteira Hedera.
-- Importação de carteira Hedera existente durante o processo de cadastro.
-- Autenticação segura com suporte a blockchain.
-- Gerenciamento de contas de usuário e informações relacionadas.
+- **Cadastro de usuário com criação de carteira Hedera:** Os usuários podem se cadastrar na plataforma, o que inclui a criação automática de uma carteira Hedera para eles. Isso permite que eles participem da rede Web3 e realizem transações de forma segura.
+
+- **Importação de Carteira Hedera existente durante o processo de cadastro:** Durante o processo de cadastro, os usuários têm a opção de importar uma carteira Hedera existente, caso já possuam uma. Isso oferece flexibilidade aos usuários que desejam usar uma carteira existente em vez de criar uma nova.
+- **Login de Usuário a Partir de Conta Existente:** Os usuários podem fazer login em suas contas existentes usando suas credenciais. Isso proporciona uma experiência de autenticação simples e rápida para acessar suas carteiras e outras informações relacionadas.
+- **Criptografia e Descriptografia de Informações Armazenadas no localhost:**As informações sensíveis armazenadas localmente, como chaves privadas e outros dados confidenciais, são criptografadas para garantir a segurança. Além disso, a plataforma permite descriptografar essas informações quando necessário para uso na interação com a rede Hedera.
 
 ## Tecnologias
 
-- [Lista de tecnologias e bibliotecas utilizadas no projeto, por exemplo:](#tecnologias)
+- [Lista de tecnologias e bibliotecas utilizadas no projeto:](#tecnologias)
   - Hedera Hashgraph
   - @hashgraph/sdk
   - Mongodb
@@ -55,13 +57,3 @@ Este projeto oferece uma solução de Cadastro e Login de Usuário integrada com
 1. Dentro do diretório backend inicie o servidor: `npm start` ou `yarn start`.
 2. Dentro do diretório frontend inicie o app: `ionic serve`
 3. Acesse o aplicativo em: `http://localhost:8000`
-
-![showcase](https://github.com/llLeco/SignUpWeb3App/assets/80337869/42861341-a9ff-43d8-955a-b2fa6ceaa332)
-
-## Contato
-
-Para mais informações, entre em contato:
-
-- Email: leandrollemos712@gmail.com
-
-[Badges] https://shields.io/badges
