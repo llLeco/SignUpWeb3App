@@ -3,7 +3,6 @@ import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
 import { HttpClient } from '@angular/common/http';
 import { ToastController } from '@ionic/angular';
-import * as bcrypt from 'bcryptjs';
 import { HederaService } from '../services/hedera.service';
 
 @Component({

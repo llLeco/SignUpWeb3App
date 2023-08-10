@@ -9,7 +9,7 @@ require('dotenv').config();
 
 @Module({
   imports: [
-    MongooseModule.forRoot('YOUR_MONGODB_URL'),
+    MongooseModule.forRoot(process.env.MONGODB_URL, { useNewUrlParser: true }),
     UsersModule
   ],
   controllers: [AppController],

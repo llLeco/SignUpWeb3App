@@ -399,7 +399,7 @@ export class RegisterPage implements OnInit {
           console.error('Failed to present loading controller', error);
           return;
         }
-        bcrypt.hash(this.userRegisterData.password, this.saltRounds, async (err, hash) => {
+        bcrypt.hash(this.userRegisterData.password, this.saltRounds, async (err: any, hash: any) => {
           if (err) {
             console.error(err);
           } else {
