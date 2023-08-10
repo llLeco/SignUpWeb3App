@@ -2,15 +2,6 @@
 
 Uma solução que permite o cadastro e login de usuários com a capacidade de criar ou importar uma carteira Hedera durante o processo de cadastro. Esse projeto é direcionado para aplicativos web3 que necessitam de carteiras individuais para cada usuário.
 
-## Índice
-
-- [Descrição](#descrição)
-- [Funcionalidades](#funcionalidades)
-- [Tecnologias](#tecnologias)
-- [Pré-requisitos](#pré-requisitos)
-- [Instalação](#instalação)
-- [Como Usar](#como-usar)
-
 ## Descrição
 
 Este projeto oferece uma solução de Cadastro e Login de Usuário integrada com a blockchain Hedera. Ele permite aos usuários criar carteiras Hedera ou importar carteiras existentes durante o processo de cadastro. A integração com a Hedera fornece a segurança e a descentralização necessárias para aplicativos Web3. O projeto foi desenvolvido com as tecnologias Angular, Ionic e NestJs para garantir uma experiência de usuário rica e eficiente.
@@ -27,7 +18,7 @@ Este projeto oferece uma solução de Cadastro e Login de Usuário integrada com
 
 ## Tecnologias
 
-- [Lista de tecnologias e bibliotecas utilizadas no projeto:](#tecnologias)
+- Lista de tecnologias e bibliotecas utilizadas no projeto:
   - Hedera Hashgraph
   - @hashgraph/sdk
   - Mongodb
