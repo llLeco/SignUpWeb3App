@@ -54,10 +54,9 @@ Este projeto oferece uma solução de Cadastro e Login de Usuário integrada com
 
 1. Dentro do diretório backend inicie o servidor: `npm start` ou `yarn start`.
 2. Dentro do diretório frontend inicie o app: `ionic serve`
-3. Acesse o aplicativo em: `http://localhost:8000`.
+3. Acesse o aplicativo em: `http://localhost:8000`
 
-![Sem nome (1582 × 1582 px)](https://github.com/llLeco/SignUpWeb3App/assets/80337869/e42f21f4-97ab-4fca-9cdf-28dbeabdd2eb)
-
+![showcase](https://github.com/llLeco/SignUpWeb3App/assets/80337869/42861341-a9ff-43d8-955a-b2fa6ceaa332)
 
 ## Contato
 
