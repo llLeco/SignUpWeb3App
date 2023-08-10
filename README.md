@@ -19,7 +19,7 @@ Este projeto oferece uma solução de Cadastro e Login de Usuário integrada com
 
 - **Importação de Carteira Hedera existente durante o processo de cadastro:** Durante o processo de cadastro, os usuários têm a opção de importar uma carteira Hedera existente, caso já possuam uma. Isso oferece flexibilidade aos usuários que desejam usar uma carteira existente em vez de criar uma nova.
 - **Login de Usuário a Partir de Conta Existente:** Os usuários podem fazer login em suas contas existentes usando suas credenciais. Isso proporciona uma experiência de autenticação simples e rápida para acessar suas carteiras e outras informações relacionadas.
-- **Criptografia e Descriptografia de Informações Armazenadas no localhost:**As informações sensíveis armazenadas localmente, como chaves privadas e outros dados confidenciais, são criptografadas para garantir a segurança. Além disso, a plataforma permite descriptografar essas informações quando necessário para uso na interação com a rede Hedera.
+- **Criptografia e Descriptografia de Informações Armazenadas no localhost:** As informações sensíveis armazenadas localmente, como chaves privadas e outros dados confidenciais, são criptografadas para garantir a segurança. Além disso, a plataforma permite descriptografar essas informações quando necessário para uso na interação com a rede Hedera.
 
 ## Tecnologias
 
