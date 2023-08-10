@@ -4,7 +4,7 @@
 [![Last Update](https://img.shields.io/github/last-commit/llLeco/SignUpWeb3App)](https://github.com/llLeco/SignUpWeb3App/commits/main)
 
 [![GitHub](https://img.shields.io/github/followers/llLeco?label=Follow&style=social)](https://github.com/llLeco)
-[![Twitter Follow](https://img.shields.io/twitter/follow/YourTwitterHandle?style=social)](https://twitter.com/Leco712)
+[![Twitter Follow](https://img.shields.io/twitter/follow/Leco712?style=social)](https://twitter.com/Leco712)
 
 
 ## Descrição
