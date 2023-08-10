@@ -10,8 +10,6 @@ Uma solução que permite o cadastro e login de usuários com a capacidade de cr
 - [Pré-requisitos](#pré-requisitos)
 - [Instalação](#instalação)
 - [Como Usar](#como-usar)
-- [Contribuição](#contribuição)
-- [Licença](#licença)
 - [Contato](#contato)
 
 ## Descrição
@@ -58,7 +56,8 @@ Este projeto oferece uma solução de Cadastro e Login de Usuário integrada com
 2. Dentro do diretório frontend inicie o app: `ionic serve`
 3. Acesse o aplicativo em: `http://localhost:8000`.
 
-[Inclua capturas de tela ou exemplos de código aqui, se possível.]
+![Sem nome (1582 × 1582 px)](https://github.com/llLeco/SignUpWeb3App/assets/80337869/e42f21f4-97ab-4fca-9cdf-28dbeabdd2eb)
+
 
 ## Contato
 
