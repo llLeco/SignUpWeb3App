@@ -1,5 +1,19 @@
 # Sistema de Cadastro e Login de Usuário com Integração Blockchain
 
+[![Build Status](https://img.shields.io/github/workflow/status/llLeco/SignUpWeb3App/Build%20and%20Test)](https://github.com/llLeco/SignUpWeb3App/actions)
+[![Coverage](https://img.shields.io/codecov/c/github/llLeco/SignUpWeb3App)](https://codecov.io/gh/llLeco/SignUpWeb3App)
+[![Version](https://img.shields.io/github/v/release/llLeco/SignUpWeb3App)](https://github.com/llLeco/SignUpWeb3App/releases)
+[![License](https://img.shields.io/github/license/llLeco/SignUpWeb3App)](https://github.com/llLeco/SignUpWeb3App/blob/main/LICENSE)
+[![Platform](https://img.shields.io/badge/platform-web%20%7C%20android%20%7C%20ios-lightgrey)](https://github.com/llLeco/SignUpWeb3App)
+[![Downloads](https://img.shields.io/github/downloads/llLeco/SignUpWeb3App/total)](https://github.com/llLeco/SignUpWeb3App/releases)
+[![Last Update](https://img.shields.io/github/last-commit/llLeco/SignUpWeb3App)](https://github.com/llLeco/SignUpWeb3App/commits/main)
+[![Open Issues](https://img.shields.io/github/issues/llLeco/SignUpWeb3App)](https://github.com/llLeco/SignUpWeb3App/issues)
+[![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg)](https://github.com/llLeco/SignUpWeb3App/pulls)
+
+[![GitHub](https://img.shields.io/github/followers/llLeco?label=Follow&style=social)](https://github.com/llLeco)
+[![Twitter Follow](https://img.shields.io/twitter/follow/YourTwitterHandle?style=social)](https://twitter.com/Leco712)
+
+
 ## Descrição
 
 Este projeto oferece uma solução de Cadastro e Login de Usuário integrada com a blockchain Hedera. Ele permite aos usuários criar carteiras Hedera ou importar carteiras existentes durante o processo de cadastro. A integração com a Hedera fornece a segurança e a descentralização necessárias para aplicativos Web3. O projeto foi desenvolvido com as tecnologias Angular, Ionic e NestJs para garantir uma experiência de usuário rica e eficiente.
