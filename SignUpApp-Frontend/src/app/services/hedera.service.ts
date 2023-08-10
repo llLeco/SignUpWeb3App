@@ -5,7 +5,7 @@ import * as CryptoJS from 'crypto-js';
 import { Observable, catchError, throwError } from 'rxjs';
 
 export enum ELocalStorage {
-  animeChainConnectKey = 'animeChainConnectKey',
+  signUpConnectKey = 'signUpConnectKey',
 }
 
 export interface IUser {
@@ -70,12 +70,12 @@ export class HederaService {
   saveUserAccount(wallet: IUser, password: string): void {
     const encrypt = CryptoJS.AES.encrypt(JSON.stringify(wallet), password).toString();
     const encData = CryptoJS.enc.Base64.stringify(CryptoJS.enc.Utf8.parse(encrypt));
-    localStorage.setItem(ELocalStorage.animeChainConnectKey, encData);
+    localStorage.setItem(ELocalStorage.signUpConnectKey, encData);
   }
 
   //Decrypt and retrieve account from Hedera
   decyptuserInfo(password: string): IUser | undefined {
-    const local = localStorage.getItem(ELocalStorage.animeChainConnectKey);
+    const local = localStorage.getItem(ELocalStorage.signUpConnectKey);
     if (local) {
       const decData = CryptoJS.enc.Base64.parse(local).toString(CryptoJS.enc.Utf8);
       const decrypted = CryptoJS.AES.decrypt(decData, password).toString(CryptoJS.enc.Utf8);

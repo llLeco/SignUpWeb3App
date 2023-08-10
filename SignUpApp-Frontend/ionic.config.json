@@ -1,5 +1,5 @@
 {
-  "name": "animechain-frontend",
+  "name": "frontend",
   "integrations": {
     "capacitor": {}
   },

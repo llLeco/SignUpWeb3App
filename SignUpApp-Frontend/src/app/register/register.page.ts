@@ -78,8 +78,8 @@ export class RegisterPage implements OnInit {
   // Other variables
   saltRounds = 10;
   items = [
-    { icon: 'image', label: 'Cards' },
-    { icon: 'trophy', label: 'Badges' },
+    { icon: 'image', label: 'Images' },
+    { icon: 'trophy', label: 'Achievements' },
     { icon: 'star', label: 'Points' },
     { icon: 'person', label: 'Data' }
   ];
@@ -155,6 +155,7 @@ export class RegisterPage implements OnInit {
 
       await loading.dismiss();
 
+      console.log('Hedera wallet response', hederaWalletResponse);
       if (!hederaWalletResponse || !hederaWalletResponse.privateKey || !hederaWalletResponse.id) {
         console.error('Error while creating the Hedera wallet', JSON.stringify(hederaWalletResponse, null, 2));
         return;

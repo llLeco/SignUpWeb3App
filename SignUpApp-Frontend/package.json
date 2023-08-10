@@ -1,5 +1,5 @@
 {
-  "name": "animechain-frontend",
+  "name": "frontend",
   "version": "0.0.1",
   "author": "Ionic Framework",
   "homepage": "https://ionicframework.com/",
@@ -47,6 +47,7 @@
     "@angular/language-service": "^16.0.0",
     "@capacitor/cli": "5.0.4",
     "@ionic/angular-toolkit": "^9.0.0",
+    "@types/bcryptjs": "^2.4.2",
     "@types/crypto-js": "^4.1.1",
     "@types/jasmine": "~4.3.0",
     "@types/node": "^12.20.55",

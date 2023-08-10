@@ -2,7 +2,7 @@ import { CapacitorConfig } from '@capacitor/cli';
 
 const config: CapacitorConfig = {
   appId: 'io.ionic.starter',
-  appName: 'animechain-frontend',
+  appName: 'frontend',
   webDir: 'www',
   server: {
     androidScheme: 'https'
