@@ -39,17 +39,43 @@ Este projeto oferece uma solução de Cadastro e Login de Usuário integrada com
 ## Instalação
 
 1. Clone este repositório.
-2. Navegue para o diretório backend: `cd SignUpApp-Backend/`.
-3. Instale as dependências: `npm install` ou `yarn install`.
-4. Navegue para o diretório frontend: `cd SignUpApp-Frontend/`
-5. Instale as dependências: `npm install` ou `yarn install`.
-6. Crie um arquivo chamado .env dentro da raiz do projeto backend com estas informações:
- - HEDERA_PRIVATE='SuaChavePrivadaHedera'
- - HEDERA_ACCOUNT='SuaContaHedera' (0.0.xxxxxxxx)
- - MONGODB_URI='URLDoBancoDeDadosMongoDB' (mongodb+srv://username:xxxxxxxxxxxx@clusterx.xxxxxx.mongodb.net/)
+```bash
+git clone https://github.com/llLeco/SignUpWeb3App.git
+```
+3. Navegue para o diretório backend:
+```bash
+cd SignUpApp-Backend/
+```
+5. Instale as dependências: 
+```bash
+npm install ou yarn install
+```
+7. Navegue para o diretório frontend:
+```bash
+cd SignUpApp-Frontend/
+```
+9. Instale as dependências:
+```bash
+npm install ou yarn install
+```
+11. Crie um arquivo chamado .env dentro da raiz do projeto backend com estas informações:
+```bash
+ HEDERA_PRIVATE='SuaChavePrivadaHedera'
+ HEDERA_ACCOUNT='SuaContaHedera' (0.0.xxxxxxxx)
+ MONGODB_URI='URLDoBancoDeDadosMongoDB' (mongodb+srv://username:xxxxxxxxxxxx@clusterx.xxxxxx.mongodb.net/)
+```
 
 ## Como Usar
 
-1. Dentro do diretório backend inicie o servidor: `npm start` ou `yarn start`.
-2. Dentro do diretório frontend inicie o app: `ionic serve`
-3. Acesse o aplicativo em: `http://localhost:8000`
+1. Dentro do diretório backend inicie o servidor:
+```bash
+npm start ou yarn start
+```
+4. Dentro do diretório frontend inicie o app:
+```bash
+ionic serve
+```
+7. Acesse o aplicativo em:
+```bash
+http://localhost:8000`
+```
