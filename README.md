@@ -42,23 +42,23 @@ Este projeto oferece uma solução de Cadastro e Login de Usuário integrada com
 ```bash
 git clone https://github.com/llLeco/SignUpWeb3App.git
 ```
-3. Navegue para o diretório backend:
+2. Navegue para o diretório backend:
 ```bash
 cd SignUpApp-Backend/
 ```
-5. Instale as dependências: 
+3. Instale as dependências: 
 ```bash
 npm install ou yarn install
 ```
-7. Navegue para o diretório frontend:
+4. Navegue para o diretório frontend:
 ```bash
 cd SignUpApp-Frontend/
 ```
-9. Instale as dependências:
+5. Instale as dependências:
 ```bash
 npm install ou yarn install
 ```
-11. Crie um arquivo chamado .env dentro da raiz do projeto backend com estas informações:
+6. Crie um arquivo chamado .env dentro da raiz do projeto backend com estas informações:
 ```bash
  HEDERA_PRIVATE='SuaChavePrivadaHedera'
  HEDERA_ACCOUNT='SuaContaHedera' (0.0.xxxxxxxx)
@@ -71,11 +71,11 @@ npm install ou yarn install
 ```bash
 npm start ou yarn start
 ```
-4. Dentro do diretório frontend inicie o app:
+2. Dentro do diretório frontend inicie o app:
 ```bash
 ionic serve
 ```
-7. Acesse o aplicativo em:
+3. Acesse o aplicativo em:
 ```bash
 http://localhost:8000`
 ```
