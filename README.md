@@ -1,80 +1,81 @@
-# Sistema de Cadastro e Login de Usuário com Integração Blockchain
+# User Signup and Login System with Blockchain Integration
 
 ![GitHub top language](https://img.shields.io/github/languages/top/llLeco/SignUpWeb3App)
 [![Last Update](https://img.shields.io/github/last-commit/llLeco/SignUpWeb3App)](https://github.com/llLeco/SignUpWeb3App/commits/main)
 [![GitHub](https://img.shields.io/github/followers/llLeco?label=Follow&style=social)](https://github.com/llLeco)
 [![Twitter Follow](https://img.shields.io/twitter/follow/Leco712?style=social)](https://twitter.com/Leco712)
 
+## Description
 
-## Descrição
-
-Este projeto oferece uma solução de Cadastro e Login de Usuário integrada com a blockchain Hedera. Ele permite aos usuários criar carteiras Hedera ou importar carteiras existentes durante o processo de cadastro. A integração com a Hedera fornece a segurança e a descentralização necessárias para aplicativos Web3. O projeto foi desenvolvido com as tecnologias Angular, Ionic e NestJs para garantir uma experiência de usuário rica e eficiente.
+This project provides a user signup and login solution integrated with the Hedera blockchain. It allows users to create Hedera wallets or import existing wallets during the signup process. Integration with Hedera provides the necessary security and decentralization for Web3 applications. The project was developed using Angular, Ionic, and NestJs technologies to ensure a rich and efficient user experience.
 
 ![showcase](https://github.com/llLeco/SignUpWeb3App/assets/80337869/42861341-a9ff-43d8-955a-b2fa6ceaa332)
 
-## Funcionalidades
+## Features
 
-- **Cadastro de usuário com criação de carteira Hedera:** Os usuários podem se cadastrar na plataforma, o que inclui a criação automática de uma carteira Hedera para eles. Isso permite que eles participem da rede Web3 e realizem transações de forma segura.
+- **User Signup with Hedera Wallet Creation:** Users can sign up on the platform, which includes the automatic creation of a Hedera wallet for them. This allows them to participate in the Web3 network and perform transactions securely.
 
-- **Importação de Carteira Hedera existente durante o processo de cadastro:** Durante o processo de cadastro, os usuários têm a opção de importar uma carteira Hedera existente, caso já possuam uma. Isso oferece flexibilidade aos usuários que desejam usar uma carteira existente em vez de criar uma nova.
-- **Login de Usuário a Partir de Conta Existente:** Os usuários podem fazer login em suas contas existentes usando suas credenciais. Isso proporciona uma experiência de autenticação simples e rápida para acessar suas carteiras e outras informações relacionadas.
-- **Criptografia e Descriptografia de Informações Armazenadas no localhost:** As informações sensíveis armazenadas localmente, como chaves privadas e outros dados confidenciais, são criptografadas para garantir a segurança. Além disso, a plataforma permite descriptografar essas informações quando necessário para uso na interação com a rede Hedera.
+- **Import Existing Hedera Wallet During Signup:** During the signup process, users have the option to import an existing Hedera wallet if they already have one. This offers flexibility for users who wish to use an existing wallet instead of creating a new one.
 
-## Tecnologias
+- **User Login from Existing Account:** Users can log in to their existing accounts using their credentials. This provides a simple and quick authentication experience to access their wallets and other related information.
 
-- Lista de tecnologias e bibliotecas utilizadas no projeto:
+- **Encryption and Decryption of Locally Stored Information:** Sensitive information stored locally, such as private keys and other confidential data, is encrypted to ensure security. Additionally, the platform allows decryption of this information when needed for interaction with the Hedera network.
+
+## Technologies
+
+- List of technologies and libraries used in the project:
   - Hedera Hashgraph
   - @hashgraph/sdk
-  - Mongodb
+  - MongoDB
   - Nest.js (Node.js)
   - Angular & Ionic Frameworks
 
-## Pré-requisitos
+## Prerequisites
 
-- Node.js e npm instalados.
-- Carteira Hedera testnet (Cadastre-se e crie uma carteira aqui: https://portal.hedera.com/register)
-- Banco de dados Mongodb (Cadastre-se e crie um banco de dados aqui: https://www.mongodb.com/pt-br)
+- Node.js and npm installed.
+- Hedera testnet wallet (Sign up and create a wallet here: https://portal.hedera.com/register)
+- MongoDB database (Sign up and create a database here: https://www.mongodb.com/pt-br)
 
-## Instalação
+## Installation
 
-1. Clone este repositório.
+1. Clone this repository.
 ```bash
 git clone https://github.com/llLeco/SignUpWeb3App.git
 ```
-2. Navegue para o diretório backend:
+2. Navigate to the backend directory:
 ```bash
 cd SignUpApp-Backend/
 ```
-3. Instale as dependências: 
+3. Install dependencies:
 ```bash
 npm install ou yarn install
 ```
-4. Navegue para o diretório frontend:
+4. Navigate to the frontend directory:
 ```bash
 cd SignUpApp-Frontend/
 ```
-5. Instale as dependências:
+5. Install dependencies:
 ```bash
 npm install ou yarn install
 ```
-6. Crie um arquivo chamado .env dentro da raiz do projeto backend com estas informações:
+6. Create a file named .env in the root of the backend project with this information:
 ```bash
  HEDERA_PRIVATE='SuaChavePrivadaHedera'
  HEDERA_ACCOUNT='SuaContaHedera' (0.0.xxxxxxxx)
  MONGODB_URI='URLDoBancoDeDadosMongoDB' (mongodb+srv://username:xxxxxxxxxxxx@clusterx.xxxxxx.mongodb.net/)
 ```
 
-## Como Usar
+## How to Use
 
-1. Dentro do diretório backend inicie o servidor:
+1. Inside the backend directory, start the server:
 ```bash
 npm start ou yarn start
 ```
-2. Dentro do diretório frontend inicie o app:
+2. Inside the frontend directory, start the app:
 ```bash
 ionic serve
 ```
-3. Acesse o aplicativo em:
+3. Access the application at:
 ```bash
 http://localhost:8000
 ```
