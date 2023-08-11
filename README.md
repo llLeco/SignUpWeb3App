@@ -77,5 +77,5 @@ ionic serve
 ```
 3. Acesse o aplicativo em:
 ```bash
-http://localhost:8000`
+http://localhost:8000
 ```
