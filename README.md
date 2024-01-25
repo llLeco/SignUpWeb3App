@@ -62,7 +62,7 @@ npm install ou yarn install
 ```bash
  HEDERA_PRIVATE='SuaChavePrivadaHedera'
  HEDERA_ACCOUNT='SuaContaHedera' (0.0.xxxxxxxx)
- MONGODB_URI='URLDoBancoDeDadosMongoDB' (mongodb+srv://username:xxxxxxxxxxxx@clusterx.xxxxxx.mongodb.net/)
+ MONGODB_URL='URLDoBancoDeDadosMongoDB' (mongodb+srv://username:xxxxxxxxxxxx@clusterx.xxxxxx.mongodb.net/)
 ```
 
 ## How to Use
